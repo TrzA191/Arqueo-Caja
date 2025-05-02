@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Contable</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header con menú de navegación -->
+    <header class="bg-primary text-white">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="m-0">Gestión Contable</h1>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <!-- Sección del Menú -->
+        <section class="bg-light p-4 rounded mb-4 shadow-sm position-relative">
+            <nav class="nav-horizontal">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Libro Diario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/html/mayor.html">Libro Mayor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/html/arqueo.html">Arqueo de caja
+
+                    </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/html/BC.html">Balanza de comprobación
+
+                    </a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/html/EstadoResult.html">Estado de resultados</a>
+                    
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Formulario principal -->
+        <section class="mi-seccion bg-light p-4 rounded mb-4 shadow-sm">
+            <form class="row g-3" action="javascript:void(0);" method="POST" onsubmit="aplicacion.Agregar()">
+                <!-- 
+                <div class="col-md-6">
+                    <label for="nombre-completo" class="form-label">Nombre completo</label>
+                    <input id="nombre-completo" name="nombre-completo" class="form-control" type="text"
+                    placeholder="Nombre completo" required>
+                </div>
+                
+                <div class="col-md-6">
+                    <!--
+                    <label for="category" class="form-label">Categoría</label>
+                    <select id="category" name="category" class="form-select" required>
+                        Opciones generadas dinámicamente 
+                    </select>
+                </div>
+            -->
+            
+            <div class="row g-3 align-items-center">
+                <div class="col-md-6">
+                    <label for="fecha" class="form-label">Selecciona una fecha:</label>
+                    <input type="date" class="form-control form-control-sm" id="fecha" name="fecha" style="width: 100%;">
+                </div>
+                <div class="col-md-6">
+                    <label for="identificador" class="form-label">Identificador:</label>
+                    <input id="identificador" name="nombre-operacion" class="form-control form-control-sm" type="number" placeholder="Numero">
+                </div>
+            </div>
+            
+                
+                <!-- 
+                
+                <div class="col-md-6">
+                    <label for="descripcion" class="form-label">Descripción de la operación</label>
+                    <input id="descripcion" name="descripcion-operacion" class="form-control" type="text"
+                        placeholder="Descripción de la operación">
+                </div>
+            
+                -->
+                <div class="fila-categorias-especifica d-flex gap-3 align-items-center">
+                    <div class="col-md-4">
+                        <label for="category1" class="form-label">Cuenta</label>
+                        <select id="category1" name="category1" class="form-select"></select>
+                    </div>
+                    <div class="col-md-3"> <!-- Cambiado a col-md-3 para hacerlo más pequeño -->
+                        <label for="debe" class="form-label">Debe</label>
+                        <input id="debe" type="number" name="debe" class="form-control" placeholder="Ingrese cantidad...">
+                    </div>
+                    <div class="col-md-3"> <!-- Cambiado a col-md-3 para hacerlo más pequeño -->
+                        <label for="debe" class="form-label">Haber</label>
+                        <input id="haber" type="number" name="haber" class="form-control" placeholder="Ingrese cantidad...">
+                    </div>
+                </div>
+                <!-- Resumen Activo y Pasivo -->
+                
+                <!-- Botón Enviar -->
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" onclick="Agregar()">Agregar</button>
+                    <button onclick="sessionStorage.removeItem('datosContables'); alert('Datos reseteados')" 
+        class="btn btn-danger mt-3">
+    Resetear Datos
+</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Tabla de transacciones -->
+        <section class="bg-white p-4 rounded shadow-sm">
+    <h2 class="h5 mb-3">Balance General</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha</th>
+                <th>Cuenta</th>
+                <th>Debe</th>
+                <th>Haber</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoBalance">
+            <!-- Filas se agregarán dinámicamente aquí -->
+        </tbody>
+        <tfoot>
+            <!-- Totales -->
+            <tr>
+                <TD></TD>
+                <td colspan="2">Total Debe:</td>
+                <td><strong><span id="totalActivo">$0.00</span></strong></td>
+                <td><strong><span id="totalPasivo">$0.00</span></strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+        
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white text-center py-3 mt-4">
+        <p>© 2025 Gestión Contable | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/app.js"></script> <!-- Archivo JavaScript externo -->
+</body>
+
+</html>

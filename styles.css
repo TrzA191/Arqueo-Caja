@@ -1,0 +1,362 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.filters {
+    border: 1px solid #ddd;
+}
+
+.transactions {
+    border: 1px solid #ccc;
+}
+
+table {
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Estilo para las cajas de texto transparentes */
+.transparent-input {
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%; /* Más pequeñas */
+    padding: 5px;
+}
+
+.form{
+    border-color: rgb(145, 202, 202);
+}
+
+
+.mi-seccion {
+    border-radius: 10px;
+    border-top: 3px solid rgb(230, 228, 225); /* Cambia "orange" por el color que prefieras */
+    border-bottom: 4px solid rgb(230, 228, 225);; 
+    padding: 20px; /* Opcional, para dar espacio interno */
+}
+
+/* Archivo: styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav-fijo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    background-color: #f8f9fa;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-item {
+    margin: 10px 0;
+}
+
+/* Archivo: styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav-horizontal {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido horizontalmente a la derecha */
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Hacer la lista de enlaces horizontal */
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black; /* Color del texto por defecto */
+    background-color: transparent; /* Fondo transparente por defecto */
+    padding: 5px; /* Espaciado para el efecto del cuadro */
+    border-radius: 5px; /* Bordes redondeados opcional */
+    transition: background-color 0.3s ease; /* Suaviza el cambio */
+}
+
+.nav-link:hover {
+    background-color: blue; /* Fondo azul al pasar el cursor */
+    color: white; /* Cambia el color del texto para mejor visibilidad */
+}
+
+
+
+.fila-categorias-especifica {
+    display: flex; /* Solo afectará al contenedor con esta clase */
+    justify-content: space-between; /* Espaciado uniforme */
+    gap: 20px; /* Espaciado opcional entre los elementos */
+}
+
+.fila-categorias-especifica .col-md-6 {
+    flex: 1; /* Asegura que las columnas sean proporcionales */
+}
+
+#cuentas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaciado reducido entre tablas */
+    justify-content: center;
+}
+
+.ledger-table {
+    flex: 1 1 calc(25% - 10px); /* Ahora 4 columnas por fila */
+    max-width: 250px; /* Reduce el tamaño máximo */
+    min-width: 200px; /* Asegura un tamaño mínimo */
+    margin: 5px; /* Espaciado más compacto */
+    border-collapse: collapse;
+    background: white;
+    font-size: 12px; /* Reduce el tamaño del texto */
+}
+
+.ledger-table th, .ledger-table td {
+    border: 1px solid #ccc;
+    padding: 5px; /* Reduce el padding */
+    text-align: center;
+}
+
+.ledger-divider {
+    background-color: #eee;
+}
+
+.table-title {
+    font-weight: bold;
+    font-size: 1em; /* Tamaño de fuente más compacto */
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+
+body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .table thead th {
+            background-color: #ffcc99;
+            text-align: center;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .table tfoot td {
+            background-color: #ffe0cc;
+            font-weight: bold;
+            text-align: right;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+        }
+    
+/* Estilos para la tabla de balanza */
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th, 
+.table-bordered td {
+    border: 1px solid #dee2e6;
+    padding: 8px 12px;
+}
+
+.table-active {
+    background-color: rgba(0,0,0,.05);
+    font-weight: bold;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.table {
+    width: 100%;
+    background-color: white;
+    table-layout: fixed; /* Ancho uniforme en columnas */
+}
+
+th, td {
+    padding: 10px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+/* Define un ancho fijo para cada columna */
+.col-1, .col-2, .col-3, .col-4 {
+    width: 25%; /* Cada columna ocupa el 25% del ancho */
+}
+
+/* Colores para cada columna */
+.col-1 {
+    background-color: #fef4c5;
+}
+.col-2 {
+    background-color: #dbe9ff;
+}
+.col-3 {
+    background-color: #ffc8c8;
+}
+.col-4 {
+    background-color: #cfc5eb;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.company-header {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+.report-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.table-custom {
+    border: 1px solid #000;
+}
+.table-custom th, .table-custom td {
+    border: 1px solid #000;
+    padding: 8px;
+}
+.table-custom th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.total-row {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+.negative-value {
+    color: red;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.container-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.section-title {
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.denomination-item {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.denomination-item:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.total-box {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.btn-calculate {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.btn-calculate:hover {
+    background-color: #0069d9;
+}
+
+.result-box {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: none;
+}
