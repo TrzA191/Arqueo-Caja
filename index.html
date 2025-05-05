@@ -96,18 +96,19 @@
                 <!-- Resumen Activo y Pasivo -->
                 
                 <!-- Botón Enviar -->
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-primary" onclick="Agregar()">Agregar</button>
+                <div class="col-md-12 d-flex flex-wrap gap-3 justify-content-start">
+                    <button type="button" class="btn btn-primary" style="background-color: #007bff; border-color: #007bff;" onclick="Agregar()">Agregar</button>
+                
                     <button onclick="sessionStorage.removeItem('datosContables'); alert('Datos reseteados')" 
-        class="btn btn-danger mt-3">
-    Resetear Datos
-</button>
+                        class="btn btn-danger" style="background-color: #b30000; border-color: #900000;">Resetear Datos</button>
+                
+                    <button type="button" class="btn btn-success" style="background-color: #28a745; border-color: #28a745;" onclick="borrarUltimoDato()">Borrar último dato</button>
                 </div>
             </form>
-        </section>
+        </section>  
 
         <!-- Tabla de transacciones -->
-        <section class="bg-white p-4 rounded shadow-sm">
+        <section class="bg-white p-4 rounded shadow-sm scroll-diario">
     <h2 class="h5 mb-3">Balance General</h2>
     <table class="table">
         <thead>

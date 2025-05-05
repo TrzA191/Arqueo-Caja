@@ -5,7 +5,9 @@ const menudJson = {
             { "name": "Caja" },
             { "name": "Banco" },
             { "name": "Inventario(Mercancia)" },
-            { "name": "Paquetes de llantas" }
+            { "name": "Paquetes de llantas" },
+            {"name": "Compras"},
+            {"name": "Ventas"}
         ],
         "ActivoNoCirculante": [
     { "name": "Terrenos" },
@@ -45,9 +47,31 @@ const menudJson = {
             { "name": "Superávit" },
             { "name": "Pérdidas acumuladas" },
             { "name": "Revalorización de activos" }
-        ]
+        ],
+        "GastosOperativos": [
+
+            { "name": "Gastos de Compra" },
+            { "name": "Gastos de Operación" },
+            { "name": "Fletes y transporte" },
+            { "name": "Seguros sobre mercancía" },
+            { "name": "Gastos administrativos relacionados con compras" },
+            { "name": "Publicidad y marketing" },
+            { "name": "Servicios públicos" },
+            { "name": "Honorarios profesionales" }
+        ],
+        "ComprasVentasAjustes": [
+    { "name": "Descuentos sobre compras" },
+    { "name": "Descuentos sobre ventas" },
+    { "name": "Devoluciones sobre compras" },
+    { "name": "Devoluciones sobre ventas" },
+    { "name": "Reembolsos de compras" },
+    { "name": "Reembolsos de ventas" }
+]
+
+
     }
 };
+
 
 // Espera a que el DOM esté completamente cargado antes de ejecutar el código
 document.addEventListener('DOMContentLoaded', function () {
@@ -57,7 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
         "Activo No Circulante": menudJson.menu.ActivoNoCirculante,
         "IVA": menudJson.menu.IVA,
         "Pasivo": menudJson.menu.Pasivo,
-        "Capital": menudJson.menu.Capital
+        "Capital": menudJson.menu.Capital,
+        "GastosOperativos": menudJson.menu.GastosOperativos,
+        "ComprasVentasAjustes":menudJson.menu.ComprasVentasAjustes
     });
 });
 
@@ -439,6 +465,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function resetearDatos() {
     sessionStorage.removeItem('datosContables');
+    // Opcional: recargar la página
+    location.reload();
+}
+
+function borrarUltimoDato() {
+    let datos = sessionStorage.getItem('datosContables');
+
+    if (datos) {
+        let arrayDatos = JSON.parse(datos);
+        
+        if (arrayDatos.length > 0) {
+            arrayDatos.pop(); // elimina el último elemento
+            sessionStorage.setItem('datosContables', JSON.stringify(arrayDatos));
+        }
+    }
+
     // Opcional: recargar la página
     location.reload();
 }

@@ -1,0 +1,5 @@
+arqueo
+- parte roja marque cuanto falta
+- en la parte derecha que se vea la 
+  cantidad de la multiplicacion
+- que no borre los datos al cargar

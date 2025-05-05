@@ -360,3 +360,8 @@ body {
     margin-top: 30px;
     display: none;
 }
+
+.scroll-diario {
+    max-height: 300px;  /* Puedes ajustar este valor */
+    overflow-y: auto;
+}
